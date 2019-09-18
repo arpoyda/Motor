@@ -1,0 +1,182 @@
+###############################################################################
+#
+# IAR ELF Linker V7.70.1.11437/W32 for ARM                28/Aug/2019  17:30:12
+# Copyright 2007-2016 IAR Systems AB.
+#
+#    Output file  =  D:\Документы\Modbus_Motor\Debug\Exe\modbus_motor.out
+#    Map file     =  D:\Документы\Modbus_Motor\Debug\List\modbus_motor.map
+#    Command line =  
+#        D:\Документы\Modbus_Motor\Debug\Obj\adc_dma.o
+#        D:\Документы\Modbus_Motor\Debug\Obj\hal.o
+#        D:\Документы\Modbus_Motor\Debug\Obj\main.o
+#        D:\Документы\Modbus_Motor\Debug\Obj\modbus.o
+#        D:\Документы\Modbus_Motor\Debug\Obj\stm32f0xx_adc.o
+#        D:\Документы\Modbus_Motor\Debug\Obj\stm32f0xx_can.o
+#        D:\Документы\Modbus_Motor\Debug\Obj\stm32f0xx_cec.o
+#        D:\Документы\Modbus_Motor\Debug\Obj\stm32f0xx_comp.o
+#        D:\Документы\Modbus_Motor\Debug\Obj\stm32f0xx_crc.o
+#        D:\Документы\Modbus_Motor\Debug\Obj\stm32f0xx_crs.o
+#        D:\Документы\Modbus_Motor\Debug\Obj\stm32f0xx_dac.o
+#        D:\Документы\Modbus_Motor\Debug\Obj\stm32f0xx_dbgmcu.o
+#        D:\Документы\Modbus_Motor\Debug\Obj\stm32f0xx_dma.o
+#        D:\Документы\Modbus_Motor\Debug\Obj\stm32f0xx_exti.o
+#        D:\Документы\Modbus_Motor\Debug\Obj\stm32f0xx_flash.o
+#        D:\Документы\Modbus_Motor\Debug\Obj\stm32f0xx_gpio.o
+#        D:\Документы\Modbus_Motor\Debug\Obj\stm32f0xx_i2c.o
+#        D:\Документы\Modbus_Motor\Debug\Obj\stm32f0xx_iwdg.o
+#        D:\Документы\Modbus_Motor\Debug\Obj\stm32f0xx_misc.o
+#        D:\Документы\Modbus_Motor\Debug\Obj\stm32f0xx_pwr.o
+#        D:\Документы\Modbus_Motor\Debug\Obj\stm32f0xx_rcc.o
+#        D:\Документы\Modbus_Motor\Debug\Obj\stm32f0xx_rtc.o
+#        D:\Документы\Modbus_Motor\Debug\Obj\stm32f0xx_spi.o
+#        D:\Документы\Modbus_Motor\Debug\Obj\stm32f0xx_syscfg.o
+#        D:\Документы\Modbus_Motor\Debug\Obj\stm32f0xx_tim.o
+#        D:\Документы\Modbus_Motor\Debug\Obj\stm32f0xx_usart.o
+#        D:\Документы\Modbus_Motor\Debug\Obj\stm32f0xx_wwdg.o
+#        D:\Документы\Modbus_Motor\Debug\Obj\usart.o -o
+#        D:\Документы\Modbus_Motor\Debug\Exe\modbus_motor.out --redirect
+#        _Printf=_PrintfFull --redirect _Scanf=_ScanfFull --map
+#        D:\Документы\Modbus_Motor\Debug\List\modbus_motor.map --config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.5\arm\config\linker\ST\stm32f030x6.icf" --semihosting --entry
+#        __iar_program_start --vfe
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x08000000 { ro section .intvec };
+"P1":  place in [from 0x08000000 to 0x08007fff] { ro };
+"P2":  place in [from 0x20000000 to 0x20000fff] { rw, block CSTACK, block HEAP };
+
+  Section   Kind        Address   Size  Object
+  -------   ----        -------   ----  ------
+"A0":                             0x40
+  .intvec   ro code  0x08000000   0x40  vector_table_M.o [4]
+                   - 0x08000040   0x40
+
+"P1":                            0x284
+  .text     ro code  0x08000040  0x194  stm32f0xx_rcc.o [1]
+  .text     ro code  0x080001d4   0x80  hal.o [1]
+  .text     ro code  0x08000254   0x1a  cmain.o [4]
+  .text     ro code  0x0800026e    0x4  low_level_init.o [3]
+  .text     ro code  0x08000272    0xc  main.o [1]
+  .text     ro code  0x0800027e    0x8  exit.o [3]
+  .text     ro code  0x08000286    0x2  vector_table_M.o [4]
+  .text     ro code  0x08000288   0x10  stm32f0xx_iwdg.o [1]
+  .text     ro code  0x08000298    0xa  cexit.o [4]
+  .text     ro code  0x080002a4   0x14  exit.o [5]
+  .text     ro code  0x080002b8    0xc  cstartup_M.o [4]
+                   - 0x080002c4  0x284
+
+"P2":                            0x400
+  CSTACK             0x20000000  0x400  <Block>
+    CSTACK  uninit   0x20000000  0x400  <Block tail>
+                   - 0x20000400  0x400
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  rw data
+    ------            -------  -------
+D:\Документы\Modbus_Motor\Debug\Obj: [1]
+    hal.o                 128
+    main.o                 12
+    stm32f0xx_iwdg.o       16
+    stm32f0xx_rcc.o       404
+    ----------------------------------
+    Total:                560
+
+command line: [2]
+    ----------------------------------
+    Total:
+
+dl6M_tln.a: [3]
+    exit.o                  8
+    low_level_init.o        4
+    ----------------------------------
+    Total:                 12
+
+rt6M_tl.a: [4]
+    cexit.o                10
+    cmain.o                26
+    cstartup_M.o           12
+    vector_table_M.o       66
+    ----------------------------------
+    Total:                114
+
+shb_l.a: [5]
+    exit.o                 20
+    ----------------------------------
+    Total:                 20
+
+    Gaps                    2
+    Linker created               1 024
+--------------------------------------
+    Grand Total:          708    1 024
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address  Size  Type      Object
+-----                      -------  ----  ----      ------
+?main                   0x08000255        Code  Gb  cmain.o [4]
+CSTACK$$Base            0x20000000         --   Gb  - Linker created -
+CSTACK$$Limit           0x20000400         --   Gb  - Linker created -
+IWDG_ReloadCounter      0x08000289   0x8  Code  Gb  stm32f0xx_iwdg.o [1]
+RCC_AHBPeriphClockCmd   0x0800010d  0x20  Code  Gb  stm32f0xx_rcc.o [1]
+RCC_APB1PeriphClockCmd  0x0800014d  0x20  Code  Gb  stm32f0xx_rcc.o [1]
+RCC_APB2PeriphClockCmd  0x0800012d  0x20  Code  Gb  stm32f0xx_rcc.o [1]
+RCC_GetFlagStatus       0x0800016d  0x4a  Code  Gb  stm32f0xx_rcc.o [1]
+RCC_GetSYSCLKSource     0x080000bf   0xa  Code  Gb  stm32f0xx_rcc.o [1]
+RCC_HCLKConfig          0x080000c9  0x14  Code  Gb  stm32f0xx_rcc.o [1]
+RCC_HSEConfig           0x08000041   0xc  Code  Gb  stm32f0xx_rcc.o [1]
+RCC_HSICmd              0x08000087  0x24  Code  Gb  stm32f0xx_rcc.o [1]
+RCC_PCLKConfig          0x080000e5  0x16  Code  Gb  stm32f0xx_rcc.o [1]
+RCC_SYSCLKConfig        0x080000ab  0x14  Code  Gb  stm32f0xx_rcc.o [1]
+RCC_WaitForHSEStartUp   0x0800004d  0x3a  Code  Gb  stm32f0xx_rcc.o [1]
+Region$$Table$$Base     0x00000000         --   Gb  - Linker created -
+Region$$Table$$Limit    0x00000000         --   Gb  - Linker created -
+__ICFEDIT_region_RAM_end__ {Abs}
+                        0x20000fff        Data  Gb  command line/config [2]
+__ICFEDIT_region_RAM_start__ {Abs}
+                        0x20000000        Data  Gb  command line/config [2]
+__cmain                 0x08000255        Code  Gb  cmain.o [4]
+__exit                  0x080002a5  0x14  Code  Gb  exit.o [5]
+__iar_program_start     0x080002b9        Code  Gb  cstartup_M.o [4]
+__low_level_init        0x0800026f   0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x08000000        Data  Gb  vector_table_M.o [4]
+_call_main              0x08000261        Code  Gb  cmain.o [4]
+_exit                   0x08000299        Code  Gb  cexit.o [4]
+_main                   0x0800026b        Code  Gb  cmain.o [4]
+exit                    0x0800027f   0x8  Code  Gb  exit.o [3]
+main                    0x08000273   0xc  Code  Gb  main.o [1]
+rcc_config              0x080001d5  0x7c  Code  Gb  hal.o [1]
+
+
+[1] = D:\Документы\Modbus_Motor\Debug\Obj
+[2] = command line
+[3] = dl6M_tln.a
+[4] = rt6M_tl.a
+[5] = shb_l.a
+
+    708 bytes of readonly  code memory
+  1 024 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
